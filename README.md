@@ -1,25 +1,37 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Financial Planner
 
-Things you may want to cover:
+## Set-up
 
-* Ruby version
+To get this project running locally, from the command line:
 
-* System dependencies
+- Clone the project:
 
-* Configuration
+```
+git clone git@github.com:Dpalazzari/financial_planner.git
+```
 
-* Database creation
+```
+bundle update && bundle install
+```
 
-* Database initialization
+```
+rails s
+```
 
-* How to run the test suite
+## Faq
 
-* Services (job queues, cache servers, search engines, etc.)
+The purpose of this app is to produce a financial planner app where only users can see their finances and can keep track of expenses on a regular basis.
 
-* Deployment instructions
+## Tech stack
 
-* ...
-# financial_planner
+- Ruby on Rails
+- PostgreSQL
+- JavaScript/jQuery
+- Bootstrap/SASS
+- RSpec for TDD
+
+## Primary contributor
+
+[Drew Palazzari](https://github.com/Dpalazzari)
