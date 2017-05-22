@@ -5,7 +5,7 @@
       <li><%= link_to 'Register', new_user_path, class: "btn btn-default"%></li>
       <li><%= link_to 'Login', login_path, class: "btn btn-default" %></li>
     <% else %>
-      <li><%= link_to "Logout", dashboard_path, class: "btn btn-default" %></li>
+      <li><%= link_to "Logout", logout_path, method: :DELETE, class: "btn btn-default" %></li>
     <% end %>
     <li class="welcome-btn">
       <%= link_to "Welcome", root_path, class: "btn btn-default" %>
