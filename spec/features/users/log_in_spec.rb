@@ -5,6 +5,7 @@ RSpec.feature 'User' do
   before(:each) do
     @user = create(:user)
   end
+  
   context 'successfully logs in' do
     it 'directs the user to the dashboard page' do
       visit login_path
