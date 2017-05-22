@@ -2,7 +2,7 @@
 
 # Financial Planner
 
-[Financial Planner](https://drewsfinancialplanner.herokuapp.com/)
+[Live Website](https://drewsfinancialplanner.herokuapp.com/)
 
 ## Set-up
 
