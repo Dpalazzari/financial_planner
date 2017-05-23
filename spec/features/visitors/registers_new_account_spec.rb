@@ -13,7 +13,7 @@ RSpec.feature 'Visitor Registration' do
         click_on 'Register'
       end
 
-      expect(page).to have_content("Successfully Registered, Drew!")
+      expect(page).to have_content("Successfully Registered Drew!")
     end
   end
 
