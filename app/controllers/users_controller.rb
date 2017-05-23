@@ -16,7 +16,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       session[:user_id] = @user.id
-      flash[:success] = "Successfully Registered, #{@user.name}!"
+      flash[:success] = "Successfully Registered #{@user.name}! This is your budget page."
       redirect_to dashboard_path
     else
       flash[:danger] = "Please make sure all fields are correctly filled out."
