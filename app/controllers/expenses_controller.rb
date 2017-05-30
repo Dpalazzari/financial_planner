@@ -7,7 +7,7 @@ class ExpensesController < ApplicationController
       flash[:info]  = "Successfully created an expense."
       redirect_to dashboard_path
     else
-      flash[:failure] = "Make sure all required fields are filled in."
+      flash[:danger] = "Make sure all required fields are filled in."
       redirect_to dashboard_path
     end
   end
