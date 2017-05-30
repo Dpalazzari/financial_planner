@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :users, only: [:new, :create] do
     resources :expenses, only: [:create]
   end
+  
   get '/dashboard' => 'users#show'
 
   get '/login' => 'sessions#new'
