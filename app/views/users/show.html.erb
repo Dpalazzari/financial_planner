@@ -4,6 +4,31 @@
     <h2>Monthly Budget: <strong>$<%= @user.budget %></strong></h2>
     <h2>Remaining Budget: $<%= @user.budget %></h2>
   </div>
+  <div class = "col-md-6">
+    <h3>Add an expense to your financial planner:</h3>
+    <%= bootstrap_form_for [@user, @expense] do |f| %>
+      <%= f.number_field :cost, placeholder: 'Expense Cost', skip_label: true %>
+      <%= f.text_field :details, placeholder: 'Expense description', skip_label: true, size: '30x15' %>
+      <%= f.submit 'Add Expense', {class: "btn btn-success btn-block"}%>
+    <% end %>
+  </div>
+</div>
+
+<div class='container'>
+  <table class="table table-hover expenses-table">
+    <tr>
+        <th> ID </th>
+        <th> Cost </th>
+        <th> Details </th>
+      </tr>
+      <% @user.expenses.each do |expense| %>
+      <tr>
+        <td> <%= expense.id %> </td>
+        <td> <%= expense.cost %> </td>
+        <td> <%= expense.details %> </td>
+      </tr>
+      <% end %>
+  </table>
 </div>
 
 
