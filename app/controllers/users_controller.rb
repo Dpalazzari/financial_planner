@@ -1,10 +1,11 @@
 class UsersController < ApplicationController
 
   def show
-    if current_user
-      render :show
-    else
+    if session[:user_id].nil?
       render file: "/public/404"
+    else
+      @user = User.find(session[:user_id])
+      @expense = @user.expenses.new
     end
   end
 
