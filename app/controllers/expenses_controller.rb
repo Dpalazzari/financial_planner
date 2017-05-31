@@ -16,7 +16,7 @@ class ExpensesController < ApplicationController
     expense = Expense.find(params[:id])
     expense.destroy
 
-    flash[:success] = "Removed expense."
+    flash[:info] = "Removed expense."
     redirect_to dashboard_path
   end
 

@@ -10,7 +10,6 @@ RSpec.feature 'User with expenses' do
 
     expect(user.expenses.count).to eq(1)
     visit dashboard_path
-    save_and_open_page
     
     click_on "Remove"
 
