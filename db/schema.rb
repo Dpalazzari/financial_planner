@@ -16,8 +16,8 @@ ActiveRecord::Schema.define(version: 20170523012322) do
   enable_extension "plpgsql"
 
   create_table "expenses", force: :cascade do |t|
-    t.float    "cost"
-    t.datetime "due_date"
+    t.integer  "cost"
+    t.date     "due_date"
     t.string   "details"
     t.integer  "user_id"
     t.datetime "created_at", null: false
