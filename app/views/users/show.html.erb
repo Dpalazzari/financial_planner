@@ -24,11 +24,12 @@
     </tr>
     <% @user.expenses.each do |expense| %>
     <tr>
-      <td> <%= expense.cost %> </td>
+      <td> $<%= expense.cost %> </td>
       <td> <%= expense.due_date %> </td>
       <td> <%= expense.details %> </td>
-    </tr>
+      <td> <%= link_to "Remove", "/expenses/#{expense.id}", method: :delete, class:'btn btn-warning btn-xs' %> </td>
     <% end %>
+    </tr>
   </table>
 </div>
 

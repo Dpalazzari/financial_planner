@@ -5,7 +5,7 @@ class UsersController < ApplicationController
       render file: "/public/404"
     else
       @user = User.find(session[:user_id])
-      @expense = @user.expenses.new
+      @expense = Expense.new
     end
   end
 

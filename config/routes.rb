@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   resources :users, only: [:new, :create] do
     resources :expenses, only: [:create]
   end
+
+  delete '/expenses/:id' => 'expenses#destroy', as: 'remove'
   
   get '/dashboard' => 'users#show'
 
