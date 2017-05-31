@@ -21,12 +21,14 @@
       <th> Cost </th>
       <th> Due Date </th>
       <th> Details </th>
+      <th>  </th>
     </tr>
     <% @user.expenses.each do |expense| %>
     <tr>
       <td> <%= expense.cost %> </td>
       <td> <%= expense.due_date %> </td>
       <td> <%= expense.details %> </td>
+      <td> <%= link_to "Remove", user_expense_path(expense.user, expense), method: :delete, class:'btn btn-warning btn-sm' %> </td>
     </tr>
     <% end %>
   </table>
