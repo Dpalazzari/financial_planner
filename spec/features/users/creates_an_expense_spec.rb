@@ -14,6 +14,7 @@ RSpec.feature 'User' do
       visit dashboard_path
       
       fill_in 'expense[cost]', with: 200.00
+      fill_in 'expense[due_date]', with: Date.new(2001,2,3.5)
       fill_in 'expense[details]', with: "Bills really stink"
       click_on 'Add Expense'
 
