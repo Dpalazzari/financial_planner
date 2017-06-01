@@ -13,7 +13,7 @@ RSpec.describe User, type: :model do
     it { is_expected.to have_many :expenses }
   end
 
-  context 'instance methods' do
+  context '.total_expense_cost' do
     it 'calculates a users total expense cost' do
       user = create(:user)
       create_list(:expense, 5, user_id: user.id, cost: 100)
