@@ -10,4 +10,8 @@ class User < ApplicationRecord
 
   has_many :expenses
 
+  def total_expense_cost
+    expenses.pluck(:cost).inject(:+)
+  end
+
 end
