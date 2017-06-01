@@ -1,0 +1,9 @@
+<div class='container'>
+  <div class = "col-md-offset-4 col-md-4">
+  <h1 style="text-align: center"> Edit Budget </h1>
+    <%= bootstrap_form_for @user do |f| %>
+      <%= f.number_field :budget, placeholder: 'Your New Budget', skip_label: true %>
+      <%= f.submit 'Submit', {class: "btn btn-info btn-block"}%>
+    <% end %>
+  </div>
+</div>
