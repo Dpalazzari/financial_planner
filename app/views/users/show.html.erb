@@ -10,8 +10,12 @@
       <%= f.number_field :cost, placeholder: 'Expense Cost', skip_label: true %>
       <%= f.date_field :due_date, placeholder: 'Expense Cost', skip_label: true %> 
       <%= f.text_field :details, placeholder: 'Expense description', skip_label: true, size: '30x15' %>
-      <%= f.submit 'Add Expense', {class: "btn btn-success btn-block"}%>
+      <%= f.submit 'Add Expense', {class: "btn btn-success btn-block"} %>
     <% end %>
+    <p class = "login-or-separator text-center"><strong>OR need to change your budget?</strong></p>
+    <%= link_to 'Update Budget', edit_user_path(@user), class:"btn btn-warning btn-block"%>
+</div>
+
   </div>
 </div>
 

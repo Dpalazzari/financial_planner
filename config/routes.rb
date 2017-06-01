@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root :to => 'welcome#index'
 
-  resources :users, only: [:new, :create] do
+  resources :users, only: [:new, :create, :edit, :update] do
     resources :expenses, only: [:create]
   end
 

@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
 
+  before_action :set_user, only: [:edit, :update]
+
   def show
     if session[:user_id].nil?
       render file: "/public/404"
@@ -25,10 +27,29 @@ class UsersController < ApplicationController
     end
   end
 
+  def edit
+    render file: "/public/404" if session[:user_id] != params[:id].to_i      
+  end
+
+  def update
+    @user.update(user_params)
+    if @user.save
+      flash[:success] = "Successfuly changed budget to $#{@user.budget}."
+      redirect_to dashboard_path
+    else
+      flash[:danger] = 'Must submit a new budget.'
+      render :edit
+    end
+  end
+
   private
 
   def user_params
     params.require(:user).permit(:name, :email, :budget, :password, :password_confirmation)
+  end
+
+  def set_user
+    @user = User.find(params[:id])
   end
 
 end
